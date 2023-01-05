@@ -1,6 +1,6 @@
 
 
-const drawCard = (gameState, setGameState) => {
+export const drawCard = (gameState, setGameState) => {
 
 
     console.log("Drawing card!");
@@ -13,4 +13,3 @@ const drawCard = (gameState, setGameState) => {
 }
 
 
-export default drawCard;
