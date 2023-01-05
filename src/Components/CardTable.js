@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import Card from "./Card/Card";
 
-const CardTable = (testCards) => {
 
-    testCards = ["Card1", "Card2", "Card3", "Card4", "Card5"];
+const CardTable = ({gameState, setGameState}) => {
+
 
     return (
         <TableWrapper>
-            {testCards.map((card) => {
-                return <div>{card}</div>;
+            {gameState.table.map((card) => {
+                return <Card name={card}></Card>;
             })}
         </TableWrapper>
     );
@@ -18,6 +19,7 @@ const CardTable = (testCards) => {
 
 const TableWrapper = styled.div`
 display: grid;
+grid-template-columns: repeat(3, 1fr);
 border: 10px solid;
 max-height: 100%;
 max-width: 100%;

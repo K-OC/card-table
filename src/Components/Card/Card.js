@@ -37,8 +37,7 @@ const CardWrapper = styled.div`
 `;
 //todo add props and test object to import
 
-const Card = ({ name, info, art, alt }) => {
-  name = testCard[0].cardInfo.name;
+const Card = ({ name="Test Card", info, art, alt }) => {
   info = testCard[0].cardInfo.info;
   art = testCard[0].cardInfo.img;
   alt = testCard[0].cardInfo.alt;
