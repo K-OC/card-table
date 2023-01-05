@@ -13,7 +13,6 @@ const CardInfo = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  height: 40%;
   img {
     width: 100%;
   }
