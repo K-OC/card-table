@@ -1,7 +1,10 @@
+import Sandbox from "./Components/Sandbox";
+
+
 function App() {
   return (
     <div className="App">
-     hello simon
+      <Sandbox></Sandbox>
     </div>
   );
 }
