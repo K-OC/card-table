@@ -15,7 +15,7 @@ const Sandbox = () => {
 
     return (
         <>
-            <CardTable></CardTable>
+            <CardTable gameState={gameState} setGameState={setGameState}></CardTable>
             <DebugControls gameState={gameState} setGameState={setGameState}></DebugControls>
         </>);
 
