@@ -1,4 +1,5 @@
 import React from "react";
+import drawCard from "./utilities";
 
 const DebugControls = ({gameState, setGameState}) => {
 
@@ -24,13 +25,7 @@ const DebugControls = ({gameState, setGameState}) => {
         
         
         <button onClick={() => {
-            console.log("Drawing card!");
-            const newState = {...gameState};
-            const newCard = newState.deck.pop();
-            newState.player.hand.push(newCard);
-            setGameState(newState);
-            
-            console.log(newCard);
+            drawCard(gameState, setGameState);
         } }>Draw card</button>
 
 
