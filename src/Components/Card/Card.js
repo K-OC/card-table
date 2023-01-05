@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { testCard } from "./CardWithMockData";
-import PropTypes from "prop-types";
+import React from 'react';
+import styled from 'styled-components';
+import { testCard } from './CardWithMockData';
+import PropTypes from 'prop-types';
 
 const CardTitle = styled.div`
   width: 100%;
@@ -34,9 +34,9 @@ const CardWrapper = styled.div`
     flex: 3;
   }
 `;
-//todo add props and test object to import
+// todo add props and test object to import
 
-const Card = ({ name="Test Card", info, art, alt }) => {
+const Card = ({ name = 'Test Card', info, art, alt }) => {
   info = testCard[0].cardInfo.info;
   art = testCard[0].cardInfo.img;
   alt = testCard[0].cardInfo.alt;

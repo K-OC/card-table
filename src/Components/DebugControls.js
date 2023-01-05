@@ -1,5 +1,6 @@
-import React from "react";
-import { drawCard } from "./utilities";
+import React from 'react';
+import drawCard from './utilities';
+import PropTypes from 'prop-types';
 
 const DebugControls = ({ gameState, setGameState }) => {
   console.log(gameState);
@@ -8,13 +9,14 @@ const DebugControls = ({ gameState, setGameState }) => {
       <p>Player: {gameState.player.name}</p>
       <p>Score: {gameState.player.score}</p>
       <p>
-        Hand:{" "}
+        Hand:{' '}
         {gameState.player.hand.length > 0 &&
           gameState.player.hand.map((card) => {
             return (
               <button
+                key={card.name}
                 onClick={() => {
-                  console.log("Playing card!");
+                  console.log('Playing card!');
                   const newState = { ...gameState };
                   newState.table.push(card);
                   const cardHandIndex = newState.player.hand.indexOf(card);
@@ -22,7 +24,7 @@ const DebugControls = ({ gameState, setGameState }) => {
                   setGameState(newState);
                 }}
               >
-                {card}{" "}
+                {card}{' '}
               </button>
             );
           })}
@@ -38,6 +40,11 @@ const DebugControls = ({ gameState, setGameState }) => {
       </button>
     </div>
   );
+};
+
+DebugControls.propTypes = {
+  gameState: PropTypes.object,
+  setGameState: PropTypes.func,
 };
 
 export default DebugControls;
