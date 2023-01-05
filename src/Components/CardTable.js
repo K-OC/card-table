@@ -19,8 +19,12 @@ const CardTable = (testCards) => {
 const TableWrapper = styled.div`
 display: grid;
 border: 10px solid;
+max-height: 100%;
+max-width: 100%;
 height: 600px;
 width: 600px;
+margin: 0;
+padding: 0;
 `;
 
 
