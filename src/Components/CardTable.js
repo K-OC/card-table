@@ -27,6 +27,7 @@ height: 600px;
 width: 600px;
 margin: 0;
 padding: 0;
+overflow-y: scroll;
 `;
 
 
