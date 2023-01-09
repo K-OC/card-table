@@ -1,5 +1,5 @@
 import React from 'react';
-import { drawCard } from '../utilities';
+import { drawCard, shuffleCards } from '../utilities';
 import PropTypes from 'prop-types';
 
 const DebugControls = ({ gameState, setGameState }) => {
@@ -38,6 +38,15 @@ const DebugControls = ({ gameState, setGameState }) => {
       >
         Draw card
       </button>
+      <button
+        onClick={() => {
+          shuffleCards(gameState.deck);
+          console.log(gameState.deck);
+        }}
+      >
+        Shuffle Deck
+      </button>
+      <p>check console.log for deck order</p>
     </div>
   );
 };
