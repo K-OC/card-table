@@ -1,4 +1,4 @@
-const drawCard = (gameState, setGameState) => {
+export const drawCard = (gameState, setGameState) => {
   console.log('Drawing card!');
   const newState = { ...gameState };
   const newCard = newState.deck.pop();
@@ -7,5 +7,3 @@ const drawCard = (gameState, setGameState) => {
 
   return 0;
 };
-
-export default drawCard;
