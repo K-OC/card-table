@@ -1,5 +1,5 @@
 import React from 'react';
-import drawCard from '../utilities';
+import { drawCard } from '../utilities';
 import PropTypes from 'prop-types';
 
 const DebugControls = ({ gameState, setGameState }) => {
